@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+   <!--{include file='head.tpl'}--> 
+    
+    <body>         
+        <!--{include file='header.tpl'}-->
+        
+        <div class="container">
+            <div class="product">
+                <h2 class="new">NEW ARRIVALS</h2>
+                <!--{foreach from=$groupeproducts item=$groupe}-->
+                <div class="pink">  
+                    <!--{foreach from=$groupe item=$prod}-->
+                    <div class="col-md-3 box-in-at">                       
+                        <div class=" grid_box portfolio-wrapper">		
+                            <a href="/single/<!--{$prod.id}-->" > <img src="/views/images/products/<!--{$prod.foto[0]}-->" class="img-responsive" alt="">
+                                <!--{if $prod.issize==1 || $prod.iscolor==1}-->
+                                <div class="zoom-icon">
+                                    <!--{if $prod.issize==1}-->
+                                    <ul class="in-by">
+                                        <li><h5>sizes:</h5></li>
+                                        <!--{foreach from=$prod.sizes item=$size}-->
+                                        <li><span><!--{$size}--></span></li>
+                                        <!--{/foreach}-->                                        
+                                    </ul>
+                                    <!--{/if}-->
+                                    <!--{if $prod.iscolor==1}-->
+                                    <ul class="in-by-color">
+                                        <li><h5>colors:</h5></li>
+                                        <!--{foreach from=$prod.colors item=$color}-->
+                                        <li><span class="color" style="background: #<!--{$color}-->"> </span></li>
+                                        <!--{/foreach}-->                                        
+                                    </ul>
+                                    <!--{/if}-->
+
+                                </div>
+                                <!--{/if}-->
+                            </a> 	
+                        </div>                        
+                        <!---->
+                        <div class="grid_1 simpleCart_shelfItem">
+                            <a href="#" class="cup item_add" data-id="<!--{$prod.id}-->"><span class=" item_price" ><!--{$prod.price}--> <i> </i> </span></a>					
+                        </div>
+                        <!---->
+                    </div>
+                    <!--{/foreach}-->
+                    <div class="clearfix"> </div>
+                </div>
+                <!--{/foreach}-->
+            </div>    
+            <!---->
+            <div class="col-md-4 box-in-at">
+            
+            </div>
+            <div class="col-md-4 box-in-at">
+            <!--{$pages}-->
+            </div>
+            <div class="col-md-4 box-in-at">
+            
+            </div>
+        </div>        
+        <!--{include file="footer.tpl"}-->
+
+    </body>
+</html>

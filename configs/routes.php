@@ -1,0 +1,31 @@
+<?php
+
+return array(    
+    //'products' => 'site/products',
+    'checkout' => 'site/checkout',
+    'decor' => 'site/decor',
+    'health' => 'site/health',
+    'mobile' => 'site/mobile',
+    'admin/exit'=> 'admin/exit',
+    'admin/enter'=> 'admin/enter',
+    'admin/sectioncomand/([\w]+)'=>'admin/sectionComand/$1',
+    'admin/categorycomand/([\w]+)'=>'admin/categoryComand/$1',
+    'admin/productcomand/([\w]+)'=>'admin/productComand/$1',
+    'admin/getallforproducts' => 'admin/getAllForProducts',
+    'admin/section'=>'admin/section',
+    'admin/product'=>'admin/product',
+    'admin'  => 'admin/index',
+    'category/([0-9]+)/([0-9]+)' => 'category/products/$1/$2',
+    'category/([0-9]+)' => 'category/products/$1/1',
+    'single/([0-9]+)' => 'single/product/$1',
+    'cart/add/([0-9]+)' => 'cart/add/$1',
+    'cart/sub/([0-9]+)' => 'cart/sub/$1',
+    'cart/clear' => 'cart/clear',
+    'cart/info' => 'cart/info',
+    'error' => 'site/error',
+    'contact' => 'site/contact',
+    'brends'=> 'site/products',
+    'products' => 'site/products',
+    '[\w]+' => 'site/error',
+    '' => 'site/index'
+);

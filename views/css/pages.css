@@ -1,0 +1,42 @@
+.myRef{
+    display: block;
+    height: 100%;
+    text-align: center;
+    line-height: 50px; /*центрирование текста по вертикали*/
+    color: white;
+    text-decoration: none; /*Отменяем подчеркивание у ссылки*/
+    font-size: 2vw; /*резиновый текст относительно размера окна*/
+}
+
+#numpagesfortable{ 
+    display: inline-block;
+    height: 50px;
+    margin: auto;
+}
+
+.activetablepage{
+    background: darkblue;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: red;
+    height: 100%;
+    width: 50px;
+    float: left;
+    font-size: 2vw;
+}
+
+.activetablepage:hover{
+    background: red;    
+}
+.tablepage{
+    background: lightgreen;
+    float: left;
+    width: 50px;
+    height: 100%;
+    color: black;
+}
+.tablepage:hover{
+   background: red; 
+}
+

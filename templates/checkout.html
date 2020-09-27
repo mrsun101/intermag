@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <!--{include file='head.tpl'}-->
+    <body>
+        <!--{include file='header.tpl'}-->
+        <div class="container">
+            <div class="check">	 
+                <div class="col-md-3 cart-total">
+                    <a class="continue" href="#">Continue to basket</a>
+                    <div class="price-details">
+                        <h3>Price Details</h3>
+                        <span>Total</span>
+                        <span class="total1 simpleCart_total"></span>
+                        <span>Discount</span>
+                        <span class="total1">---</span>
+                        <span>Delivery Charges</span>
+                        <span class="total1"></span>
+                        <div class="clearfix"></div>				 
+                    </div>	
+                    <ul class="total_price">
+                        <li class="last_price"> <h4>TOTAL</h4></li>	
+                        <li class="last_price simpleCart_total"><span></span></li>
+                        
+                    </ul>
+
+
+                    <div class="clearfix"></div>
+                    <a class="order" href="#">Place Order</a>
+                    <div class="total-item">
+                        <h3>OPTIONS</h3>
+                        <h4>COUPONS</h4>
+                        <a class="cpns" href="#">Apply Coupons</a>
+                        <p><a href="#">Log In</a> to use accounts - linked coupons</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-9 cart-items">
+                    <h1>Корзина товаров</h1>
+                    <!--{foreach from=$cartarray item=$prod}-->
+                    <div class="cart-header">
+                        <div class="myclose" data-id="<!--{$prod.infor.id}-->"> </div>
+                        <div class="cart-sec simpleCart_shelfItem">
+                            
+                            <div class="cart-item cyc">
+                                <img src="/views/images/products/<!--{$prod.infor.foto[0]}-->" class="img-responsive" alt=""/>
+                            </div>
+                            <div class="cart-item-info">
+                                <h3><a href="/single/<!--{$prod.infor.id}-->"><!--{$prod.infor.name}--></a><span><!--{$prod.infor.price}--></span></h3>
+                                <!--{if $prod.infor.issize==1}-->
+                                <ul class="qty">
+                                    <!--{foreach from=$prod.infor.sizes item=$size}-->
+                                    <li><p>Size : <!--{$size}--></p></li>
+                                    <!--{/foreach}-->                                    
+                                </ul>
+                                <!--{/if}-->
+
+                                <div class="delivery">
+                                    <p>Service Charges : Rs.100.00</p>
+                                    <span>Delivered in 2-3 bussiness days</span>
+                                    <div class="clearfix"></div>
+                                </div>	
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div> 
+                    <!--{/foreach}-->
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+        <!--{include file="footer.tpl"}-->
+    </body>
+</html>
